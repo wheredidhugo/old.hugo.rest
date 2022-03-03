@@ -1,0 +1,127 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+main {
+  /* Background stuff */
+  background: linear-gradient(120deg, #86fef7, #000bff, #fd1dfd);
+    background-size: 600% 600%;
+  animation: gradient 60s ease infinite;
+
+  /* Text */
+  text-align: center;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  color: white;
+  font-size: 250%;
+
+  /* Center this */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+section {
+  width: 50%;
+  border-radius: 25px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 10%);
+  box-shadow: 0 0 5px black;
+  text-shadow: 0 0 5px black;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.typed-cursor {
+  display: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.socials {
+  width: 100%;
+}
+
+.social {
+    font-size: 100%;
+  padding: 10px 0 10px 0;
+}
+
+.social:hover {
+  width: 100%;
+  background: rgba(0, 0, 0, 10%);
+  border-radius: 25px;
+  padding: 20px 0 20px 0;
+}
+
+.fa-brands {
+    font-size: 125%;
+}
+
+.title {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+.title:hover {
+    padding-bottom: 10px;
+}
+
+.title:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3.5px;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 0 5px black;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+.title:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}  
+
+@media screen and (max-width: 530px) {
+    section {
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+    }
+    .socials {
+        width: 75%;
+    }
+}
