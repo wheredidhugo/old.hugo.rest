@@ -9,7 +9,7 @@ html, body {
 main {
   /* Background stuff */
   background: linear-gradient(120deg, #86fef7, #000bff, #fd1dfd);
-    background-size: 600% 600%;
+  background-size: 600% 600%;
   animation: gradient 60s ease infinite;
 
   /* Text */
@@ -62,11 +62,12 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .socials {
+  animation: 0.75s fadeIn;
   width: 100%;
 }
 
 .social {
-    font-size: 100%;
+  font-size: 100%;
   padding: 10px 0 10px 0;
 }
 
@@ -78,50 +79,59 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .fa-brands {
-    font-size: 125%;
+  font-size: 125%;
 }
 
 .title {
-    display: inline-block;
-    position: relative;
-    color: white;
+  display: inline-block;
+  position: relative;
+  color: white;
 }
 
 .title:hover {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .title:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 3.5px;
-    bottom: 0;
-    left: 0;
-    box-shadow: 0 0 5px black;
-    background-color: white;
-    transform-origin: bottom right;
-    transition: transform 0.5s ease-out;
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3.5px;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 0 5px black;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
 }
 
 .title:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}  
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
 @media screen and (max-width: 530px) {
-    section {
-        border-radius: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        height: 100%;
-    }
-    .socials {
-        width: 75%;
-    }
+  section {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  .socials {
+    width: 75%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
 }
