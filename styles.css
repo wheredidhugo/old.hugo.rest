@@ -82,6 +82,10 @@ a:link, a:visited, a:hover, a:active {
   font-size: 125%;
 }
 
+.fa-spotify {
+  font-size: 100%;
+}
+
 .title {
   display: inline-block;
   position: relative;
